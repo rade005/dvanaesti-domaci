@@ -42,17 +42,13 @@ const Login = () => {
         <>
             {!userState.isLoggedIn ? (
                 <form>
-                    {loginError && <p style={{ color: "red" }}>{loginError}</p>}
+                    {loginError ? <p>{loginError}</p> : null}
                     <input
-                        type="text"
-                        placeholder="Unesite korisničko ime"
-                        value={username}
+                        type="text" placeholder="Unesite korisničko ime" value={username}
                         onChange={(e) => setUsername(e.target.value)}
                     />
                     <input
-                        type="password"
-                        placeholder="Unesite lozinku"
-                        value={password}
+                        type="password" placeholder="Unesite lozinku" value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
                     <button type="button" onClick={checkCredentials}>

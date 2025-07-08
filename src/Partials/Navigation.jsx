@@ -15,9 +15,7 @@ export const Navigation = () => {
     return (
         <>
             {userState.isLoggedIn ? (
-                <a href="/logout" onClick={logoutUser}>
-                    Logout
-                </a>
+                <a href="/logout" onClick={logoutUser}>Logout</a>
             ) : (
                 <a href="/login">Login</a>
             )}
