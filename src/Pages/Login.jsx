@@ -51,9 +51,7 @@ const Login = () => {
                         type="password" placeholder="Unesite lozinku" value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
-                    <button type="button" onClick={checkCredentials}>
-                        Login
-                    </button>
+                    <button type="button" onClick={checkCredentials}>Login</button>
                 </form>
             ) : (
                 <p>Dobrodošli, {userState.username}!</p>
